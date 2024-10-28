@@ -83,15 +83,16 @@ export function getInputValue(input) {
 }
 
 inputNumber.addEventListener("blur", () => {
-  switchPayBtn();
+
   const numberValue = getInputValue(inputNumber);
   const numberValidation = cardValidator.number(numberValue);
-  
+
   if (numberValidation.isValid) {
     inputNumber.classList.remove('error');
   } else {
     inputNumber.classList.add('error');
   }
+  switchPayBtn();
 });
 
 inputDate.addEventListener("blur", () => {
@@ -104,6 +105,7 @@ inputDate.addEventListener("blur", () => {
     } else {
       inputDate.classList.add('error');
     }
+    switchPayBtn();
 });
 
 inputCVV.addEventListener("blur", () => {
@@ -115,4 +117,5 @@ inputCVV.addEventListener("blur", () => {
   } else {
     inputCVV.classList.add('error');
   }
+  switchPayBtn();
 });
