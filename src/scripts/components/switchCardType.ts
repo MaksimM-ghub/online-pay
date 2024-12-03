@@ -4,10 +4,10 @@ import visa from "../../images/visa-logo.svg";
 import mastercard from "../../images/mastercard-logo.svg";
 import mir from "../../images/mir-logo.svg";
 
-export function switchCardType(cardType, imgContainer) {
+export function switchCardType(cardType: string, imgContainer: HTMLElement): void {
   setChildren(imgContainer, []); // Очистка контейнера
 
-  let imgSrc;
+  let imgSrc: string = '';
   switch(cardType) {
     case 'mir':
       imgSrc = mir;
@@ -24,8 +24,8 @@ export function switchCardType(cardType, imgContainer) {
 
   const imgPay = el('img.img-pay', {
     src: imgSrc,
-    alt: 'Платежная система ${cardType}'
-  });
+    alt: `Платежная система ${cardType}`
+  }) as HTMLElement;
 
   setChildren(imgContainer, [imgPay]);
 }

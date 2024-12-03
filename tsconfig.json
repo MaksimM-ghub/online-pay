@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES6",                          // Версия JavaScript, в которую компилируется TypeScript
+    "module": "ES6",                          // Модульная система
+    "strict": true,                           // Строгая проверка типов
+    "esModuleInterop": true,                  // Позволяет использовать CommonJS и модули ES6 вместе
+    "skipLibCheck": true,                     // Пропуск проверки библиотек
+    "forceConsistentCasingInFileNames": true, // Проверка соблюдения регистра в путях
+    "outDir": "./app",                        // Директория для компилированных файлов
+    "rootDir": "./src",                       // Директория с исходными файлами TypeScript
+    "moduleResolution": "node",              // Использование Node.js для поиска модулей
+  },
+  "include": ["src/**/*.ts"],                // Какие файлы включить для компиляции
+  "exclude": ["node_modules"]                // Какие файлы игнорировать
+}

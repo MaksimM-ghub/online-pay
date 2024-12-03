@@ -1,9 +1,9 @@
 // базовые подключения
-@import "vars";
-@import "mixins";
-@import "fonts";
-@import "global";
+@use "vars";
+@use "mixins";
+@use "fonts";
+@use "global";
 
 // подключения компонентов страницы
 
-@import './components/card'
+@use './components/card'
